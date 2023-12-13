@@ -1,0 +1,22 @@
+import streamlit as st
+
+# Title and description
+st.title("Find the Largest Number!")
+st.write("Enter three numbers and discover which one is the biggest!")
+
+# Define input fields
+num1 = st.number_input("Number 1:", min_value=-100000000, max_value=100000000)
+num2 = st.number_input("Number 2:", min_value=-100000000, max_value=100000000)
+num3 = st.number_input("Number 3:", min_value=-100000000, max_value=100000000)
+
+# Calculate the largest number
+largest_num = max(num1, num2, num3)
+
+# Display the result
+if st.button("Find Largest"):
+    st.write(f"The largest number is: {largest_num}")
+
+# Use Streamlit Cloud for hosting
+if __name__ == "__main__":
+    # Run the app
+    st.run()
